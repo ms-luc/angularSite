@@ -1,0 +1,30 @@
+<h1>Date : {{currentTime | date:'yyyy-MM-dd HH:mm:ss'}}</h1>
+
+
+
+<h3>Weather</h3>
+<p>{{weatherData.current_observation.display_location.full}}: {{weatherData.current_observation.temp_c}}C</p>
+
+<button (click)="toggleAbout()">{{aboutShow ? "Hide About" : "Show About"}}</button>
+<button (click)="toggleServices()">{{servicesShow ? "Hide Our Services" : "Show Our Services"}}</button>
+<button (click)="toggleCustomer()">{{customersShow ? "Hide Our Customers" : "Show Our Customers"}}</button>
+<div *ngIf = "aboutShow">
+    <h3>About: </h3>
+    <p>We are a small group of devs
+       <br/> 
+       Nice to meet you</p>
+
+</div>
+
+<div *ngIf = "servicesShow">
+    <h3>Our Services: </h3>
+    <p>We do dev</p>
+    
+</div>
+
+<div *ngIf = "customersShow">
+    <h3>Our Customers: </h3>
+    <p>we have no customers</p>
+    
+</div> 
+
